@@ -3,7 +3,7 @@
 
 <strong> Self-Training Large Language and Vision Assistant for Medical </strong> [[paper]()]
 
-[Guohao Sun](https://urchinpie.com/), [Can Qin](https://canqin.tech/), [Jiamian Wang](https://jiamian-wang.github.io/), [Huazhu Fu](https://hzfu.github.io/), [Linwei Wang](https://www.rit.edu/directory/lxwast-linwei-wang), [Zhiqiang Tao](https://ztao.cc/)
+[Guohao Sun](https://urchinpie.com/), [Can Qin](https://canqin.tech/), [Huazhu Fu](https://hzfu.github.io/), [Linwei Wang](https://www.rit.edu/directory/lxwast-linwei-wang), [Zhiqiang Tao](https://ztao.cc/)
 
 <p align="center">
   <img src="./images/cover.png" width="500px"> <br>
@@ -88,6 +88,6 @@ Evaluate models on a diverse set of 3 benchmarks. To ensure the reproducibility,
 
 
 ## Acknowledgement
-- [SQ-LlaVA](https://arxiv.org/pdf/2403.11299.pdf): the codebase we built upon.
+- [SQ-LLaVA](https://arxiv.org/pdf/2403.11299.pdf): the codebase we built upon.
 
 
