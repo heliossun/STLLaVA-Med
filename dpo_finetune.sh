@@ -1,31 +1,10 @@
-#!/bin/bash -l
-# NOTE the -l flag!
-#
-
-#SBATCH --job-name=dpo
-#SBATCH --error=/home/gs4288/guohao/sqLLaVA/RC_error/err_%j.txt
-#SBATCH --output=/home/gs4288/guohao/sqLLaVA/RC_out/out_%j.txt
-#SBATCH --ntasks 1
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=10
-#SBATCH --time=0-5:20:00
-#SBATCH --gpus-per-node=a100:4
-#SBATCH --partition tier3
-#SBATCH --mem=64g
-#SBATCH --account=crossmodal
-#SBATCH --partition=tier3
-
-
-source ~/conda/etc/profile.d/conda.sh
-conda activate lmm
-
 deepspeed train_mem_dpo.py \
     --lora_enable True --lora_r 128 --lora_alpha 256 --mm_projector_lr 2e-5 \
     --deepspeed ./scripts/zero3.json \
     --model_name_or_path ./checkpoints/medical/sqllava-med-7b-70k \
     --version v1 \
-    --data_path /home/gs4288/guohao/data/medData/instruct/sqllava_med_70k_dpo_10k.json \
-    --image_folder /home/gs4288/guohao/data/sqllava-med/llavaMed \
+    --data_path sqllava_med_70k_dpo_10k.json \
+    --image_folder llavaMed \
     --vision_tower ./checkpoints/medical/sqllava-med-7b-70k-vit \
     --pretrain_mm_mlp_adapter ./checkpoints/medical/sqllava-med-7b-lora-70k-9epo/non_lora_trainables.bin \
     --mm_projector_type cluster \
@@ -35,7 +14,7 @@ deepspeed train_mem_dpo.py \
     --image_aspect_ratio pad \
     --group_by_modality_length False \
     --bf16 True \
-    --output_dir ./checkpoints/sqllava-med-lora-7b-70k-dpo-v3-1po\
+    --output_dir ./checkpoints/\
     --num_train_epochs 1 \
     --per_device_train_batch_size 4 \
     --per_device_eval_batch_size 12 \

@@ -39,7 +39,7 @@ def eval_Sophon(args):
     os.makedirs(os.path.dirname(answers_file), exist_ok=True)
     ans_file = open(answers_file, "w")
     idx=0
-    img_fs = os.listdir(args.image_folder)[:10000]
+    img_fs = os.listdir(args.image_folder)[10000:20000]
     for img in tqdm(img_fs):
 
         ext = os.path.splitext(img)[1]

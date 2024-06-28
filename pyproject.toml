@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sqllava"
+name = "stllava"
 version = "1.0.0"
-description = "Visual self-questioning for large language and visual assistant."
+description = "Self-training pipeline for medical Vision-Language assistant."
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
@@ -25,8 +25,8 @@ dependencies = [
 train = ["deepspeed", "ninja", "wandb", "tensorboardX"]
 
 [project.urls]
-"Homepage" = "https://github.com/heliossun/SQ-LLaVA"
-"Bug Tracker" = "https://github.com/heliossun/SQ-LLaVA/issues"
+"Homepage" = "https://github.com/heliossun/STLLaVA-Med"
+"Bug Tracker" = "https://github.com/heliossun/STLLaVA-Med/issues"
 
 [tool.setuptools.packages.find]
 exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*"]
