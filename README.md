@@ -1,9 +1,9 @@
 # Self-Training Large Language and Vision Assistant for Medical
-<em> The advancement of medical image understanding and reasoning critically depends on building high-quality visual instruction data, which is costly and labor-intensive to obtain, particularly in the medical domain. To mitigate this data-starving issue, we introduce <strong>S</strong>elf-<strong>T</strong>raining <strong>L</strong>arge <strong>L</strong>anguage <strong>a</strong>nd <strong>V</strong>ision <strong>A</strong>ssistant for <strong>Med</strong>ical (STLLaVA-Med).</em>
+<em> The advancement of medical image understanding and reasoning critically depends on building high-quality visual instruction data, which is costly and labor-intensive to obtain, particularly in the medical domain. To mitigate this data-starving issue, we introduce <strong>S</strong>elf-<strong>T</strong>raining <strong>L</strong>arge <strong>L</strong>anguage <strong>a</strong>nd <strong>V</strong>ision <strong>A</strong>ssistant for <strong>Med</strong>icine (STLLaVA-Med).</em>
 
-<strong> Self-Training Large Language and Vision Assistant for Medical </strong> [[paper]()]
+<strong> Self-Training Large Language and Vision Assistant for Medical Question-Answering </strong> [[paper]()]
 
-[Guohao Sun](https://urchinpie.com/), [Can Qin](https://canqin.tech/), [Huazhu Fu](https://hzfu.github.io/), [Linwei Wang](https://www.rit.edu/directory/lxwast-linwei-wang), [Zhiqiang Tao](https://ztao.cc/)
+[Guohao Sun](https://heliossun.github.io/), [Can Qin](https://canqin.tech/), [Huazhu Fu](https://hzfu.github.io/), [Linwei Wang](https://www.rit.edu/directory/lxwast-linwei-wang), [Zhiqiang Tao](https://ztao.cc/)
 
 <p align="center">
   <img src="./images/cover.png" width="500px"> <br>
@@ -15,10 +15,16 @@
   Self-training pipeline for transforming a general Vision-Language assistant to medical expert.
 </p>
 
+## 🔥 News
+* **`2024.09.20`** We will release our checkpoints soon!
+* **`2024.09.20`** 🌟 Our paper has been accepted by EMNLP 2024 (main conference).
+* **`2024.06.10`** 🌟 Our paper and code was released!
+
 ## Contents
 - [Install](#install)
 - [Dataset](#data)
-- [Train](#train)
+- [Model Zoo](./docs/MODEL_ZOO.md)
+- [Train](#training)
 - [Evaluation](#evaluation)
 
 ## Install
@@ -55,16 +61,10 @@ This project utilizes vision instructional data provided by [LLaVA-Med](https://
 
 This project auto-generate the preference dataset using the model itself and guided by GPT-4o. We sample 10k medical images from PMC-15M. You may download the dataset via [STLLaVA-Med-DPO](https://huggingface.co/datasets/ZachSun/STLLaVA-Med-DPO).
 
-## Train
+## Traininig
 Training consists of two stages: (1) visual self-questioning instruction tuning stage, teaching the model to ask questions and follow multimodal instructions; (2) preference optimization.
 
-
-
-
-
-### Visual Instruction Tuning
-
-Instruction tuning:
+### Instruction tuning:
 Training script with DeepSpeed ZeRO-3 and lora: [`sqllava_med.sh`](https://github.com/heliossun/STLLaVA-Med/blob/main/sqllava_med.sh).
 
 - `--mm_projector_type cluster`: the prototype extractor & a two-layer MLP vision-language connector.
@@ -74,13 +74,12 @@ Training script with DeepSpeed ZeRO-3 and lora: [`sqllava_med.sh`](https://githu
 - `--version v1_sq`: training for visual self-questioning.
 - `--vit_lora_enable`: optimize vision encoder using vit lora. 
 
-Preference optimization:
+### Preference optimization:
 Training script with DeepSpeed ZeRO-3 and lora: [`dpo_finetune.sh`](https://github.com/heliossun/STLLaVA-Med/blob/main/dpo_finetune.sh).
 
 - `--version v1`: training for visual self-questioning.
 
 ## Evaluation
-Prepare data
 Please download raw images of datasets (VQA-RAD, SLAKE, PVQA) for medical VQA tasks.
 
 Evaluate models on a diverse set of 3 benchmarks. To ensure the reproducibility, we evaluate the models with greedy decoding. We do not evaluate using beam search to make the inference process consistent with the chat demo of real-time outputs.
