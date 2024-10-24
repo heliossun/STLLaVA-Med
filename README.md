@@ -16,7 +16,8 @@
 </p>
 
 ## 🔥 News
-* **`2024.09.20`** We will release our checkpoints soon!
+* **`2024.10.24`** 🌟 We have released our checkpoints!
+* **`2024.09.20`** 🌟 We will release our checkpoints soon!
 * **`2024.09.20`** 🌟 Our paper has been accepted by EMNLP 2024 (main conference).
 * **`2024.06.10`** 🌟 Our paper and code was released!
 
@@ -85,8 +86,18 @@ Please download raw images of datasets (VQA-RAD, SLAKE, PVQA) for medical VQA ta
 Evaluate models on a diverse set of 3 benchmarks. To ensure the reproducibility, we evaluate the models with greedy decoding. We do not evaluate using beam search to make the inference process consistent with the chat demo of real-time outputs.
 
 
+## Citation
+If you find this code to be useful for your research, please consider citing.
+```bash
+@inproceedings{Sun2024STLLaVAMedSL,
+  title={STLLaVA-Med: Self-Training Large Language and Vision Assistant for Medical},
+  author={Guohao Sun and Can Qin and Huazhu Fu and Linwei Wang and Zhiqiang Tao},
+  booktitle = {EMNLP},
+  year={2024},
+}
+```
 
 ## Acknowledgement
 - [SQ-LLaVA](https://arxiv.org/pdf/2403.11299.pdf): the codebase we built upon.
-
+- [LLaVA](https://github.com/haotian-liu/LLaVA).
 
