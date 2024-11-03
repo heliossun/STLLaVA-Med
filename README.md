@@ -6,7 +6,7 @@
 [Guohao Sun](https://guohaosun.com/), [Can Qin](https://canqin.tech/), [Huazhu Fu](https://hzfu.github.io/), [Linwei Wang](https://www.rit.edu/directory/lxwast-linwei-wang), [Zhiqiang Tao](https://ztao.cc/)
 
 <p align="center">
-  <img src="./images/cover.jpg" width="300px"> <br>
+  <img src="./images/cover.jpg" width="500px"> <br>
   Medical data usage and performance comparision between LLaVA-Med and our method.
 </p>
 
