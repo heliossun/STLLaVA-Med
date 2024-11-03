@@ -1,7 +1,7 @@
 # Self-Training Large Language and Vision Assistant for Medical
 <em> The advancement of medical image understanding and reasoning critically depends on building high-quality visual instruction data, which is costly and labor-intensive to obtain, particularly in the medical domain. To mitigate this data-starving issue, we introduce <strong>S</strong>elf-<strong>T</strong>raining <strong>L</strong>arge <strong>L</strong>anguage <strong>a</strong>nd <strong>V</strong>ision <strong>A</strong>ssistant for <strong>Med</strong>icine (STLLaVA-Med).</em>
 
-<strong> Self-Training Large Language and Vision Assistant for Medical Question-Answering </strong> [[paper]()]
+<strong> Self-Training Large Language and Vision Assistant for Medical Question-Answering </strong> [[paper](https://arxiv.org/abs/2406.19973)]
 
 [Guohao Sun](https://heliossun.github.io/), [Can Qin](https://canqin.tech/), [Huazhu Fu](https://hzfu.github.io/), [Linwei Wang](https://www.rit.edu/directory/lxwast-linwei-wang), [Zhiqiang Tao](https://ztao.cc/)
 
