@@ -3,7 +3,7 @@
 
 <strong> Self-Training Large Language and Vision Assistant for Medical Question-Answering </strong> [[paper](https://arxiv.org/abs/2406.19973)]
 
-[Guohao Sun](https://heliossun.github.io/), [Can Qin](https://canqin.tech/), [Huazhu Fu](https://hzfu.github.io/), [Linwei Wang](https://www.rit.edu/directory/lxwast-linwei-wang), [Zhiqiang Tao](https://ztao.cc/)
+[Guohao Sun](https://guohaosun.com/), [Can Qin](https://canqin.tech/), [Huazhu Fu](https://hzfu.github.io/), [Linwei Wang](https://www.rit.edu/directory/lxwast-linwei-wang), [Zhiqiang Tao](https://ztao.cc/)
 
 <p align="center">
   <img src="./images/cover.png" width="500px"> <br>
