@@ -1,17 +1,17 @@
 # Self-Training Large Language and Vision Assistant for Medical
 <em> The advancement of medical image understanding and reasoning critically depends on building high-quality visual instruction data, which is costly and labor-intensive to obtain, particularly in the medical domain. To mitigate this data-starving issue, we introduce <strong>S</strong>elf-<strong>T</strong>raining <strong>L</strong>arge <strong>L</strong>anguage <strong>a</strong>nd <strong>V</strong>ision <strong>A</strong>ssistant for <strong>Med</strong>icine (STLLaVA-Med).</em>
 
-<strong> Self-Training Large Language and Vision Assistant for Medical Question-Answering </strong> [[paper](https://arxiv.org/abs/2406.19973)]
+<strong> [EMNLP24] Self-Training Large Language and Vision Assistant for Medical Question-Answering </strong> [[paper](https://arxiv.org/abs/2406.19973)][[HF Model](https://huggingface.co/ZachSun/stllava-med-7b)]
 
 [Guohao Sun](https://guohaosun.com/), [Can Qin](https://canqin.tech/), [Huazhu Fu](https://hzfu.github.io/), [Linwei Wang](https://www.rit.edu/directory/lxwast-linwei-wang), [Zhiqiang Tao](https://ztao.cc/)
 
 <p align="center">
-  <img src="./images/cover.png" width="500px"> <br>
+  <img src="./images/cover.jpg" width="300px"> <br>
   Medical data usage and performance comparision between LLaVA-Med and our method.
 </p>
 
 <p align="center">
-  <img src="./images/pipeline.png" width="500px"> <br>
+  <img src="./images/pipeline.jpg" width="500px"> <br>
   Self-training pipeline for transforming a general Vision-Language assistant to medical expert.
 </p>
 
@@ -56,7 +56,7 @@ This project utilizes vision instructional data provided by [LLaVA-Med](https://
 <strong>DPO data</strong>
 
 <p align="center">
-  <img src="./images/preference_data.png" width="500px"> <br>
+  <img src="./images/preference_data.jpg" width="500px"> <br>
   DPO data example.
 </p>
 
